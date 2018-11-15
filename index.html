@@ -22,10 +22,13 @@
 
     
     <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
   </head>
 
   <body id="page-top">
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -58,7 +61,7 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">This. Is. The. Tradar.</div>
+          <div class="intro-lead-in lead">This. Is. The. Tradar.</div>
           <div class="intro-heading text-uppercase">It's Time to Make Money</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
@@ -584,6 +587,28 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+
+    <script>
+
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block"; 
+        } else {
+          document.getElementById("myBtn").style.display = "none"; 
+        }
+      }
+
+      function topFunction() { 
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        document.getElementsByClassName('lead')[0].style.color = "black";
+        document.getElementsByClassName('lead')[0].style.fontSize = "3em";
+        document.getElementsByClassName('lead')[0].innerHTML = 'Thank you for visiting';
+      }
+
+    </script>
 
   </body>
 
