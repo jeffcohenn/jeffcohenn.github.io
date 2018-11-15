@@ -310,7 +310,8 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate" method="post" action="https://formspree.io/jeff.cohen92@live.com">
+            <!-- <form id="contactForm" name="sentMessage" novalidate="novalidate" method="post" action="https://formspree.io/jeff.cohen92@live.com"> -->
+              <form id="add-user-input">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -575,6 +576,10 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -610,6 +615,23 @@
 
     </script>
 
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBn_oTE6GcNiPSF3kPNCNXWlT2ZIm763HE",
+    authDomain: "tradarapps.firebaseapp.com",
+    databaseURL: "https://tradarapps.firebaseio.com",
+    projectId: "tradarapps",
+    storageBucket: "tradarapps.appspot.com",
+    messagingSenderId: "955283382265"
+  };
+  firebase.initializeApp(config);
+
+  var db = firebase.firestore();
+    </script>
+
+    <script src="js/addData.js"></script>
+  
   </body>
 
 </html>
