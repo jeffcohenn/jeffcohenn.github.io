@@ -6,8 +6,10 @@ form.addEventListener('submit', function(evt) {
 		name: form.name.value, 
 		email: form.email.value, 
 		message: form.message.value
+		phone: form.phone.value
 });
 	form.name.value = '';
 	form.email.value = '';
 	form.message.value = '';
+	form.phone.value = '';
 })
