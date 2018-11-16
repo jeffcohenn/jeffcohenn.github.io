@@ -3,7 +3,7 @@ const form = document.querySelector('#add-user-input');
 form.addEventListener('submit', function(evt) {
 	evt.preventDefault(); 
 	db.collection('userInput').add({
-		// created
+	createdAt: firebase.firestore.FieldValue.serverTimestamp(),
 		name: form.name.value, 
 		email: form.email.value, 
 		phone: form.phone.value,
