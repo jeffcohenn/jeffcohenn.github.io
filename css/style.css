@@ -18,3 +18,8 @@
 	background-color: #555; 
 }
 
+.w-100 {
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
